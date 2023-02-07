@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.png" sizes="32x32" />
+    <link rel="icon" href="images/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="./scss/menu.scss" />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="./scss/dropdown-list.scss" />
+    <link rel="stylesheet" href="./scss/modal-complain.scss">
+    <title>Pinterest</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="menu">
+        <a class="logo" href="#">
+          <div class="logo__wrap">
+            <svg
+              class="logo__img"
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              aria-label=""
+              role="img"
+              fill="#c00"
+            >
+              <path
+                d="M0 12c0 5.123 3.211 9.497 7.73 11.218-.11-.937-.227-2.482.025-3.566.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9 1.02 0 1.512.765 1.512 1.682 0 1.025-.653 2.557-.99 3.978-.281 1.189.597 2.159 1.769 2.159 2.123 0 3.756-2.239 3.756-5.471 0-2.861-2.056-4.86-4.991-4.86-3.398 0-5.393 2.549-5.393 5.184 0 1.027.395 2.127.889 2.726a.36.36 0 0 1 .083.343c-.091.378-.293 1.189-.332 1.355-.053.218-.173.265-.4.159-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.63-2.738-1.373 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12"
+              ></path>
+            </svg>
+          </div>
+        </a>
+        <a class="home" href="#">Главная</a>
+        <a class="create" href="#">Создать</a>
+        <div class="menu-mobile-box">
+          <select class="menu-mobile-box__select">
+            <option selected>Главная</option>
+            <option>Создать</option>
+          </select>
+        </div>
+        <input
+          class="search-bar"
+          id="one"
+          type="text"
+          placeholder="Search"
+          draggable="false"
+        />
+        <div class="btn-container">
+          <button class="btn-search-mobile">
+            <svg
+              class="icon search"
+              tabindex="1"
+              height="20"
+              width="20"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              aria-label=""
+              role="img"
+              fill="#767676"
+            >
+              <path
+                d="M10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m13.12 2.88-4.26-4.26A9.842 9.842 0 0 0 20 10c0-5.52-4.48-10-10-10S0 4.48 0 10s4.48 10 10 10c1.67 0 3.24-.41 4.62-1.14l4.26 4.26a3 3 0 0 0 4.24 0 3 3 0 0 0 0-4.24"
+              ></path>
+            </svg>
+          </button>
+          <button class="btn-bell">
+            <svg
+              class="icon bell"
+              tabindex="1"
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              aria-label=""
+              role="img"
+              fill="#767676"
+            >
+              <path
+                d="M12 24c-1.66 0-3-1.34-3-3h6c0 1.66-1.34 3-3 3zm7-10.83c1.58 1.52 2.67 3.55 3 5.83H2c.33-2.28 1.42-4.31 3-5.83V7c0-3.87 3.13-7 7-7s7 3.13 7 7v6.17z"
+              ></path>
+            </svg>
+          </button>
+          <button class="btn-message">
+            <svg
+              class="icon message"
+              tabindex="1"
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              aria-label=""
+              role="img"
+              fill="#767676"
+            >
+              <path
+                d="M18 12.5a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 18 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 12 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 6 12.5M12 0C5.925 0 1 4.925 1 11c0 2.653.94 5.086 2.504 6.986L2 24l5.336-3.049A10.93 10.93 0 0 0 12 22c6.075 0 11-4.925 11-11S18.075 0 12 0"
+              ></path>
+            </svg>
+          </button>
+          <button class="btn-user">
+            <img
+              tabindex="1"
+              draggable="false"
+              class="icon pp"
+              src="images/user.icon.jpeg"
+            />
+          </button>
+          <button class="btn-drop-down">
+            <svg
+              class="icon btn"
+              tabindex="1"
+              height="12"
+              width="12"
+              viewBox="0 0 24 24"
+              fill="#767676"
+              aria-hidden="true"
+              aria-label=""
+              role="img"
+            >
+              <path
+                d="M12 19.5.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z"
+              ></path>
+            </svg>
+          </button>
+                                                    <!-- Выпадающий список -->
+          <div id="drop-menu" class="dropdown">
+            <div class="dropdown-wrap">
+              <h3 class="dropdown-text">Выпадающий список с выбором доски</h3>
+              <ul class="dropdown-item">
+                <li class="dropdown-list dropdown-list1"><a href="#" class="dropdown-link">Доска 1</a></li>
+                <li class="dropdown-list dropdown-list2"><a href="#" class="dropdown-link">Доска 2</a></li>
+                <li class="dropdown-list dropdown-list3"><a href="#" class="dropdown-link">Доска 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="pin_container">
+        <div class="card card_small">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="dropdown-content" id="myDropdown">
+            <div class="dropdown-button">
+            <div class="dropdown-item">
+            <div class="dropdown-list"><a class="dropdown-content__add">Добавить на доску</a></div>
+            <div class="dropdown-list"><a class="dropdown-content__report">Пожаловаться</a></div>
+            </div> -->
+          <!-- </div>
+          </div> -->
+        </div>
+        <div class="card card_medium">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_large">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_medium">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_small">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_large">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_medium">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_small">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_medium">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_small">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_medium">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_large">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_medium">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_small">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_medium">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card_large">
+          <div class="hover-zone">
+            <div class="top-bar">
+              <a class="top-bar__link-save">Сохранить</a>
+            </div>
+            <!-------------------->
+            <div class="bottom-bar">
+              <img class="bottom-bar__avatar" alt="ava" />
+              <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
+              <div class="bottom-bar__link-box">
+                <a class="bottom-bar__link-download" href="#">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="bottom-bar__link-more">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="gUZ R19 U9O kVc"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    aria-label=""
+                    role="img"
+                  >
+                    <path
+                      d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                      fill="#111111"
+                      stroke-width="0px"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="ut-popup">
+        <div class="ut-popup-box">
+            <div class="ut-popup-inner">
+                <div class="ut-popup-top">
+                    <h3 class="ut-popup-title">Жалоба на пин</h3>
+                </div>
+                <div class="ut-popup-center">
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="spam">
+                            <label class="ut-popup-items__cause-label" for="spam">Спам</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">Вводящие в заблуждение или повторяющиеся публикации</div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="nudity">
+                            <label class="ut-popup-items__cause-label" for="nudity">Изображения обнаженного тела или порнография</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Содержимое сексуального характера</div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="self-harm">
+                            <label class="ut-popup-items__cause-label" for="self-harm">Членовредительство</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Расстройства пищевого поведения, нанесение травм себе, суицид
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="misinformation">
+                            <label class="ut-popup-items__cause-label" for="misinformation">Ложная информация</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Ложная информация о здоровье, климате, голосованиях или теории заговора
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="hate-speech">
+                            <label class="ut-popup-items__cause-label" for="hate-speech">Агрессивные действия</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Предрассудки, стереотипы, идея превосходства белой расы, оскорбления
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="dangerous-goods">
+                            <label class="ut-popup-items__cause-label" for="dangerous-goods">Опасные товары</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Наркотики, оружие, регулируемые товары
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="attacks">
+                            <label class="ut-popup-items__cause-label" for="attacks">Преследование или критика</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Оскорбления, угрозы, изображения обнаженного тела, опубликованные без разрешения
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="graphic-violence">
+                            <label class="ut-popup-items__cause-label" for="graphic-violence">Сцены насилия</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Графическое изображение или пропаганда насилия
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="privacy-violation">
+                            <label class="ut-popup-items__cause-label" for="privacy-violation">Нарушение конфиденциальности</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                личные фотографии, персональная информация
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="intellectual-property">
+                            <label class="ut-popup-items__cause-label" for="intellectual-property">Это моя интеллектуальная собственность</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Нарушение авторских прав или прав на товарный знак
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ut-popup-bottom">
+                    <button class="ut-popup__cancel-btn">
+                        Отмена
+                    </button>
+                    <button class="ut-popup__next-btn">
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+
+
+    <form class="ut-table">
+      <div class="ut-table-box">
+          <div class="ut-table-inner">
+              <div class="ut-table-top">
+                  <h3 class="ut-table-title">Добавить на доску</h3>
+              </div>
+              <div class="ut-table-center">
+                  <!-- <div class="ut-table-items ut-table-items1">
+                      <div class="ut-table-items__check">
+                          <input class="ut-table-items__check-inp" name="appeal" type="radio" id="spam">
+                          <label class="ut-table-items__cause-label" for="spam">Доска 1</label>
+                      </div>
+                  </div> -->
+                  <div class="ut-table-items ut-table-items2">
+                      <div class="ut-table-items__check">
+                          <input class="ut-table-items__check-inp" name="appeal" type="radio" id="nudity">
+                          <label class="ut-table-items__cause-label" for="nudity">Доска 2</label>
+                      </div>
+                    </div>
+                    <div class="ut-table-items ut-table-items3">
+                      <div class="ut-table-items__check">
+                          <input class="ut-table-items__check-inp" name="appeal" type="radio" id="self-harm">
+                          <label class="ut-table-items__cause-label" for="self-harm">Доска 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </form>
+                  
+    </section>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/dropdown-list.js"></script>
+  </body>
+</html>
